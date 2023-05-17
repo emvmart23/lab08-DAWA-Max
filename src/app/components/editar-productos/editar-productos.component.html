@@ -1,0 +1,29 @@
+<div class="col-md-12 col-sm-12" id="form" style="display:block;">
+    <div class="panel panel-filled">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-12"><h2 class="m-t-xs">Edición de Producto</h2></div>
+            </div><br><br>
+            <form (ngSubmit)="guardarCambios()">
+                <div class="form-group">
+                    <label>Código</label>
+                    <input type="text" class="form-control" placeholder="Ingresar código" id="codigo" name="codigo" [(ngModel)]="producto.codigo" required>
+                </div>
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <input type="text" class="form-control" placeholder="Ingresar descripción" id="descripcion" name="descripcion" [(ngModel)]="producto.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label>Precio</label>
+                    <input type="text" class="form-control" placeholder="Ingresar precio" id="precio" name="precio" [(ngModel)]="producto.precio" required>
+                </div>
+                <div class="col-sm-12 text-right">
+                    <div class="panel-body buttons-margin">
+                        <button (click)="guardarCambios()" routerLink="/" class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
+                        <button class="btn btn-w-md btn-warning" routerLink="/">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
